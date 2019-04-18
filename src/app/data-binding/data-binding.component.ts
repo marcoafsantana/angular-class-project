@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  // url :string = 'google.com';
-  // imgUrl: string = "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  /*
+  //Class e style binding:
+
+  url :string = 'google.com';
+  imgUrl: string = "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  */
+
+  /*
+  //Event binding:
 
   valorAtual :string = '';
   isMouseOver :boolean = false;
@@ -32,6 +39,16 @@ export class DataBindingComponent implements OnInit {
   
   onMouseOut(){
     this.isMouseOver = false;
+  }
+*/
+
+  //Two-Way Binding:
+
+  nome :string ='Marco';
+
+  pessoa :object = {
+    idade : 19,
+    nome :'Laura'
   }
 
   constructor() { }

@@ -1,0 +1,24 @@
+<div>
+    <div>
+      <h5>Brute Force</h5>
+      <input type="text" #thisInput
+        [value]="nome"
+        (input)="nome = (thisInput.value)"
+      />
+
+      <p>Você digitou: {{nome}}</p>
+    </div>
+    <div>
+        <h5>Forma certa</h5>
+        <input type="text" #thisInput
+          [(ngModel)]="nome"
+        />
+
+        <p>Você digitou: {{nome}}</p>
+    </div>
+    <div>
+      <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}}</p>
+      <input type="text" [(ngModel)]="pessoa.nome" class="col-sm-4">
+      <input type="text" [(ngModel)]="pessoa.idade" class="col-sm-4">
+    </div>
+  </div>
