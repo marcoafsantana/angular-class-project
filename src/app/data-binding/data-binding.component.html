@@ -1,16 +1,18 @@
 <section>
-  <article>
-    <!-- <h4>Interpolation:</h4>
+  <!-- <article>
+    <h4>Interpolation:</h4>
     <p>{{ url }}</p>
     <img src="{{ imgUrl }}">
 
     <h4>Prperty Binding:</h4>
     <img [src]="imgUrl">
-     -->
+  </article>
+  -->
+  <!-- <article>
     <h4>Class e Style Binding</h4>
     <div class="alert col-md-12 {{meu_select.value}}" role="alert">
       Selecione uma classe:
-      <select #meu_select (change)="0"> <!--class binding-->
+      <select #meu_select (change)="0">
         <option value="alert-success">Sucesso</option>
         <option value="alert-danger">Danger</option>
         <option value="alert-warning">Warning</option>
@@ -37,6 +39,28 @@
     <div class="alert col-sm-6 alert-danger" role="alert"
         [style.display]=" meu_select.value == 'alert-danger' ? 'block': 'none' ">
         Esse texto só aparece em caso de erro.
+    </div>
+  </article> -->
+  <article>
+    <h4>Event Binding</h4>
+    <div>
+      <button (click)="botaoClicado()"
+        class="btn btn-primary">
+        clica ai
+      </button>
+
+      <input type="text" #inputTarget
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(inputTarget.value)"
+        (blur)="salvarValor(inputTarget.value)"
+      />
+      <p>Valor atual: {{ valorAtual }}</p>
+
+      <span
+        (mouseover) = "onMouseOver()"
+        (mouseout) = "onMouseOut()"
+        [class.highlight] = "isMouseOver"
+      >passe o mouse {{isMouseOver}}</span>
     </div>
   </article>
 </section>
