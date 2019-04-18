@@ -63,8 +63,17 @@
       >passe o mouse {{isMouseOver}}</span>
     </div>
   </article> -->
-  <article>
+  <!-- <article>
     <h4>Two-Way</h4>
     <app-meu-form></app-meu-form>
+  </article> -->
+  <article>
+    <h4>Input/Output property:</h4>
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+
+    <contador valor="10"
+      (mudouValor)="onMudouValor($event)"
+    ></contador>
+
   </article>
 </section>

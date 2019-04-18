@@ -44,11 +44,21 @@ export class DataBindingComponent implements OnInit {
 
   //Two-Way Binding:
 
-  nome :string ='Marco';
+  /*nome :string ='Marco';
 
   pessoa :object = {
     idade : 19,
     nome :'Laura'
+  }*/
+
+  //Input property:
+
+  // nomeDoCurso:string = "Angular";
+
+  //Output property;
+
+  onMudouValor(event){
+    console.log(event.novoValor);
   }
 
   constructor() { }

@@ -9,13 +9,17 @@ import { MeuApp2Component } from './meu-app2/meu-app2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CursosModule } from './cursos/cursos.module';
 import { MeuFormModule } from './meu-form/meu-form.module';
+import { InputPropertyComponent } from './input-property/input-property.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuAppComponent,
     MeuApp2Component,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
