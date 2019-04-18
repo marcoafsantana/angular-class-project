@@ -1,0 +1,42 @@
+<section>
+  <article>
+    <!-- <h4>Interpolation:</h4>
+    <p>{{ url }}</p>
+    <img src="{{ imgUrl }}">
+
+    <h4>Prperty Binding:</h4>
+    <img [src]="imgUrl">
+     -->
+    <h4>Class e Style Binding</h4>
+    <div class="alert col-md-12 {{meu_select.value}}" role="alert">
+      Selecione uma classe:
+      <select #meu_select (change)="0"> <!--class binding-->
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-danger">Danger</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-info">Info</option>
+      </select>
+    </div>
+    <div class="alert col-sm-6" role="alert" 
+        [class.alert-success]=" meu_select.value == 'alert-success' ">
+        This is a success alert—check it out!
+      </div>
+    <div class="alert col-sm-6" role="alert" 
+        [class.alert-danger]=" meu_select.value == 'alert-danger' ">
+        This is a danger alert—check it out!
+      </div>
+    <div class="alert col-sm-6" role="alert" 
+        [class.alert-warning]=" meu_select.value == 'alert-warning' ">
+        This is a warning alert—check it out!
+      </div>
+    <div class="alert col-sm-6" role="alert" 
+        [class.alert-info]=" meu_select.value == 'alert-info' ">
+        This is a info alert—check it out!
+      </div>
+
+    <div class="alert col-sm-6 alert-danger" role="alert"
+        [style.display]=" meu_select.value == 'alert-danger' ? 'block': 'none' ">
+        Esse texto só aparece em caso de erro.
+    </div>
+  </article>
+</section>
