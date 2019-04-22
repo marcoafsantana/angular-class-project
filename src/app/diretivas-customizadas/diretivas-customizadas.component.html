@@ -5,6 +5,19 @@
 <button fundoAmarelo>
   Botão com a tag porém não é amarela pois a diretiva só funciona na tag p.
 </button> -->
-<p highlightMouse>
+<!-- <p highlightMouse>
   Texto com HighLight quando passo o mouse.
-</p>
+</p> -->
+
+<h4>*Ng-If</h4>
+
+<div *ngIf="mostrar">
+  <p>Lista de cursos:</p>
+</div>
+
+<div *ngElse="mostrar">
+  <p>Não existem cursos</p>
+</div>
+
+
+<button (click)="onCursos()">Mostrar ou esconder</button>
