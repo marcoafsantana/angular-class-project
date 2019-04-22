@@ -1,0 +1,33 @@
+<p>Livro {{livro.titulo | uppercase | lowercase | camelCase}}</p>
+
+<p>Rate: {{livro.rate | number:'2.1-2'}}</p>
+<p>Preco: {{livro.preco | currency:'BRL':true}}</p>
+<p>Num de Páginas: {{livro.numeroDePaginas}}</p>
+
+<p>Livro: {{livro | json}}</p>
+
+<h2>Filtro:</h2>
+<input type="text" [(ngModel)]="filtro">
+<br>
+<h2>Add livro:</h2>
+<input type="text" #novoValor>
+<button (click)="addLivro(novoValor.value)">ADD   LIVRO</button>
+
+<h3>Pipe Puro</h3>
+<ul>
+  <li *ngFor="let liv of livros | filtroArray: filtro "> {{liv}} </li>
+</ul>
+
+<h3>Pipe Impuro</h3>
+<ul>
+  <li *ngFor="let liv of livros | filtroArrayImpuro: filtro "> {{liv}} </li>
+</ul>
+
+<h3>Maneira correta de obter filtros de array:</h3>
+<ul>
+  <li *ngFor="let liv of obterLivros()">> {{liv}} </li>
+</ul>
+
+<h3>Pipe Async:</h3>
+<p>{{valorAsync | async}}</p>
+<p>{{valorAsync2 | async}}</p>
