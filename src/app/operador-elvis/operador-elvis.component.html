@@ -1,0 +1,8 @@
+<div *ngFor="let tarefa of tarefas">
+  <p>Descrição: {{tarefa.desc}}</p>
+  <!-- <p>Responsavel: {{tarefa.responsavel.nome}}</p> -->
+  <!-- Brute force: -->
+  <p>Responsavel: {{tarefa.responsavel.usuario != null? tarefa.responsavel.usuario.nome : ''}}</p>
+  <!-- Com operador elvis:  -->
+  <p>Responsavel: {{ tarefa.responsavel.usuario?.nome }}</p>
+</div>

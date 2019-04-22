@@ -1,0 +1,22 @@
+<h1>Com class-binding:</h1>
+<h3>
+  <i class="glyphicon"
+    [class.glyphicon-star-empty]="!meuFavorito"
+    (click)="meuFavorito=!meuFavorito"
+  ></i>
+  <i class="glyphicon"
+    [class.glyphicon-star]="meuFavorito"
+    (click)="meuFavorito=!meuFavorito"
+  ></i>
+</h3>
+
+<h1>Com Ng-Classh: </h1>
+<h3>
+  <i class="glyphicon"
+    [ngClass]="{
+      'glyphicon-star': meuFavorito,
+      'glyphicon-star-empty': !meuFavorito
+    }"
+    (click)="meuFavorito=!meuFavorito"
+  ></i>
+</h3>

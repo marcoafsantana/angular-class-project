@@ -13,7 +13,7 @@ import { CursoDetailComponent } from './curso-detail/curso-detail.component';
     CursosComponent,
     CursoDetailComponent
   ],
-  exports:[//Quais diretivas, componentes etc iremos exportar para outros modules
+  exports: [// Quais diretivas, componentes etc iremos exportar para outros modules
     CursosComponent,
   ],
   providers: [

@@ -14,7 +14,6 @@ export class CursosComponent implements OnInit {
 
   constructor(private cursosService: CursosService) {
     this.title = 'Nome do nosso site.';
-    
     this.cursos = this.cursosService.getCursos();
   }
 

@@ -1,0 +1,23 @@
+<button 
+  [style.backgroundColor]="ativo? 'blue':'red'"
+  [style.color]="ativo? 'black':'white'"
+  [style.fontSize]="tamanhoFonte + 'px'"
+  (click)="ativo=!ativo"
+>
+  Mude aqui!
+</button>
+
+<input type="text" [(ngModel)]="tamanhoFonte">
+
+<button 
+  [ngStyle]="{
+    'backgroundColor': (ativo? 'blue':'red'),
+    'color': (ativo? 'black':'white'),
+    'fontSize': tamanhoFonte+'px'
+  }"
+  (click)="ativo=!ativo"
+>
+  Mude aqui!
+</button>
+
+<input type="text" [(ngModel)]="tamanhoFonte">
